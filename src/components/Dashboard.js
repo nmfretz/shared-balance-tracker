@@ -8,7 +8,7 @@ const Dashboard = ({ purchases }) => {
   const [error, setError] = useState(null);
 
   return (
-    <Container className="mt-5">
+    <Container className="custom-dashboard-margin">
       {error && (
         <Alert variant="danger" onClose={() => setError(null)} dismissible>
           <Alert.Heading>Error! Your feesh got away!</Alert.Heading>
@@ -18,13 +18,13 @@ const Dashboard = ({ purchases }) => {
         </Alert>
       )}
       <Row>
-        <Col md={8}>
+        <Col lg={8} md={12}>
           <Card className="p-4">
             <MainBoard purchases={purchases} setError={setError} />
           </Card>
         </Col>
 
-        <Col md={4}>
+        <Col lg={4} className="d-none d-lg-block">
           <Card>
             <RecentOrders purchases={purchases} setError={setError} />
           </Card>

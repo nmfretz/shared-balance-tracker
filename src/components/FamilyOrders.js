@@ -24,15 +24,18 @@ const FamilyOrders = ({ family, balance, purchases, setError }) => {
   return (
     <Accordion.Item eventKey={family}>
       <Accordion.Header>
-        <Container className="d-flex align-items-center">
-          <div className=" d-flex flex-column align-items-center justify-content-center me-4">
-            <img src={iconTable[family]} className="custom-user-icon" />
-            <p className="mb-0 ">{family}</p>
+        <Container className="d-flex align-items-center custom-inner-accordian-padding-mobile">
+          <div className=" d-flex flex-column align-items-center justify-content-center custom-user-icon-margin">
+            <img src={iconTable[family]} className="custom-user-icon " />
+            <p className="mb-0 custom-text-mobile">{family}</p>
           </div>
           <div className="w-100">
-            <div className="d-flex justify-content-between mb-3">
-              <p className="mb-0">{`Remaining: $${balance.toFixed(2)}`}</p>
-              <p className="mb-0">{`Initial: $${STARTING_BALANCES[family].toFixed(2)}`}</p>
+            <div className="d-flex justify-content-between custom-family-balance-margin">
+              <p className="mb-0 custom-text-mobile">
+                <span className="custom-hidden-mobile">Remaining: </span>
+                <span>${balance.toFixed(2)}</span>
+              </p>
+              <p className="mb-0 custom-hidden-mobile">{`Initial: $${STARTING_BALANCES[family].toFixed(2)}`}</p>
             </div>
             <ProgressBar
               variant={percentBalanceRemaining > 50 ? "success" : percentBalanceRemaining > 25 ? "warning" : "danger"}

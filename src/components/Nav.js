@@ -32,10 +32,10 @@ const Nav = ({ user }) => {
   }
 
   return (
-    <Navbar className="px-4 bg-white">
+    <Navbar className="px-4 bg-white ">
       <Navbar.Brand className="d-flex align-items-center">
-        <img alt="" src={logo} className="d-inline-block align-top" width="100" />{" "}
-        {`Welcome ${family ? `${family} Family` : "Stranger"}!`}
+        <img alt="" src={logo} className="d-inline-block align-top custom-site-icon" />{" "}
+        <p className="mb-0 custom-hidden-mobile">{`Welcome ${family ? `${family} Family` : "Stranger"}!`}</p>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">

@@ -56,7 +56,7 @@ const OrderModal = ({ orderToEdit, setError }) => {
       ) : (
         <Button className="custom-btn-color" variant="primary" onClick={handleShow}>
           <i className="bi bi-cart"></i>
-          <span className="ps-2">Log Your Order</span>
+          <span className="ps-2">Log Order</span>
         </Button>
       )}
 

@@ -17,7 +17,7 @@ const OrdersTable = ({ purchases, family, striped, displayAll, setError }) => {
   }
 
   return (
-    <Table striped={striped}>
+    <Table striped={striped} className="custom-text-mobile">
       <thead>
         <tr>
           <th>Date</th>
@@ -40,7 +40,7 @@ const OrdersTable = ({ purchases, family, striped, displayAll, setError }) => {
             const date = new Date(data.date.seconds * 1000);
             const parsedDate = date.toLocaleString("en-CA", DATE_OPTIONS);
             return (
-              <tr key={purchase.id}>
+              <tr key={purchase.id} className="custom-text-mobile-smaller">
                 <td>{parsedDate}</td>
                 {displayAll && <td>{data.family}</td>}
                 <td>${data.cost.toFixed(2)}</td>

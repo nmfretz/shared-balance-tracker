@@ -52,8 +52,11 @@ const MainBoard = ({ purchases, setError }) => {
 
   return (
     <>
-      <Container className="d-flex justify-content-between align-items-center mb-3 ">
-        <h3>{`2022 Group Balance: $${groupBalance.toFixed(2)}`}</h3>
+      <Container className="d-flex justify-content-between align-items-center mb-3">
+        <h3>
+          <span className="custom-hidden-mobile align-middle custom-group-balance-text-size">2022 Group Balance: </span>
+          <span className="align-middle custom-group-balance-text-size">${groupBalance.toFixed(2)}</span>
+        </h3>
         <OrderModal setError={setError} />
       </Container>
 

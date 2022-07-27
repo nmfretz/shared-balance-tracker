@@ -3,8 +3,17 @@ body {
   background-size: cover;
 }
 
+.custom-btn-color {
+  background-color: #17617e !important;
+  border-color: #17617e !important;
+}
+
 .custom-pointer {
   cursor: pointer;
+}
+
+.custom-site-icon {
+  width: 100px;
 }
 
 .custom-profile-pic:hover {
@@ -13,11 +22,6 @@ body {
 
 .custom-user-icon {
   width: 70px;
-}
-
-.custom-btn-color {
-  background-color: #17617e !important;
-  border-color: #17617e !important;
 }
 
 .custom-skipper-btn {
@@ -37,6 +41,72 @@ body {
   color: #aaa;
 }
 
+/* bootstrap selector */
 .popover-arrow {
   display: none !important;
+}
+
+.custom-dashboard-margin {
+  margin-top: 3rem;
+}
+
+.custom-user-icon-margin {
+  margin-right: 1.5em;
+}
+
+.custom-family-balance-margin {
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+  .custom-group-balance-text-size {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .custom-hidden-mobile {
+    display: none;
+  }
+
+  .custom-text-mobile {
+    font-size: 0.75rem;
+  }
+  .custom-text-mobile-smaller {
+    font-size: 0.65rem;
+  }
+
+  .custom-site-icon {
+    width: 75px;
+  }
+
+  .custom-dashboard-margin {
+    margin-top: 1rem;
+  }
+
+  .custom-group-balance-text-size {
+    font-size: 1em;
+  }
+
+  .custom-user-icon {
+    width: 40px;
+  }
+
+  .custom-user-icon-margin {
+    margin-right: 0.5em;
+  }
+
+  /* bootstrap selector */
+  .accordion-button,
+  .accordion-body {
+    padding: 0.5em 0.5em !important;
+  }
+
+  .custom-inner-accordian-padding-mobile {
+    padding: 0 0.5em 0 0 !important;
+  }
+
+  .custom-family-balance-margin {
+    margin-bottom: 0.5em;
+  }
 }
