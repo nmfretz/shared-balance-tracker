@@ -1,38 +1,42 @@
-.App {
+body {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+}
+
+.custom-pointer {
+  cursor: pointer;
+}
+
+.custom-profile-pic:hover {
+  opacity: 0.7;
+}
+
+.custom-user-icon {
+  width: 70px;
+}
+
+.custom-btn-color {
+  background-color: #17617e !important;
+  border-color: #17617e !important;
+}
+
+.custom-skipper-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-see-all-orders {
+  cursor: pointer;
   text-align: center;
+  margin-bottom: 0;
+  text-decoration: underline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-see-all-orders:hover {
+  color: #aaa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popover-arrow {
+  display: none !important;
 }
