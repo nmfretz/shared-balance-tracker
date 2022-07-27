@@ -5,6 +5,8 @@ export const STARTING_BALANCES = {
   Sinclong: 353.69,
 };
 
-export const DATE_OPTIONS = { year: "numeric", month: "short", day: "numeric" };
+// no year for mobile responsiveness
+export const DATE_OPTIONS = { month: "short", day: "numeric" };
+// export const DATE_OPTIONS = { year: "numeric", month: "short", day: "numeric" };
 
 export const collectionName = "orders";
