@@ -1,17 +1,17 @@
 import { Container, Button, Card } from "react-bootstrap";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-import { auth } from "../lib/firebase-config";
+import { useAuth } from "../contexts/AuthContext";
 import skipperLogo from "../assets/logo-black.png";
 import googleLogoTrans from "../assets/google-logo-transparent.png";
 
 const SignIn = () => {
-  function signInWithGoogle() {
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({
-      prompt: "select_account",
-    });
-    signInWithPopup(auth, provider);
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  async function handleLogin() {
+    await login();
+    navigate("/");
   }
 
   return (
@@ -29,7 +29,7 @@ const SignIn = () => {
               variant="outline-secondary"
               size="lg"
               className="w-100 d-flex justify-content-center align-items-center"
-              onClick={signInWithGoogle}
+              onClick={handleLogin}
             >
               <img src={googleLogoTrans} height="50" className="pe-3" />
               Sign in with Google

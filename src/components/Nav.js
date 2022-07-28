@@ -1,16 +1,18 @@
 import { Navbar, Image, OverlayTrigger, Popover } from "react-bootstrap";
 
+import { useAuth } from "../contexts/AuthContext";
 import logo from "../assets/logo-black.png";
 import SignOut from "./SignOut";
 import defaultUserImage from "../assets/user-icons/icons8-clown-fish-100.png";
 import { FAMILY_TO_EMAIL } from "../data/userEmails";
 
-const Nav = ({ user }) => {
-  const { displayName, email, photoURL } = user;
+const Nav = () => {
+  const { user } = useAuth();
+  // const { displayName, email, photoURL } = user;
 
   let family = null;
   for (const [fam, emails] of Object.entries(FAMILY_TO_EMAIL)) {
-    if (emails.includes(email)) {
+    if (emails.includes(user.email)) {
       family = fam;
     }
   }
@@ -18,9 +20,9 @@ const Nav = ({ user }) => {
   const popover = (
     <Popover id="popover-basic">
       <Popover.Body className="d-flex flex-column align-items-center">
-        <Image src={photoURL} onError={showDefaultImage} roundedCircle="true" width="75" />
-        <p className="fw-semibold fs-6 mt-2 mb-0">{displayName}</p>
-        <p>{email}</p>
+        <Image src={user.photoURL} onError={showDefaultImage} roundedCircle="true" width="75" />
+        <p className="fw-semibold fs-6 mt-2 mb-0">{user.displayName}</p>
+        <p>{user.email}</p>
         <SignOut />
       </Popover.Body>
     </Popover>
@@ -39,19 +41,17 @@ const Nav = ({ user }) => {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        {user && (
-          <Navbar.Text>
-            <OverlayTrigger trigger="click" placement="bottom-end" rootClose="true" overlay={popover}>
-              <Image
-                src={photoURL}
-                onError={showDefaultImage}
-                roundedCircle="true"
-                width="50"
-                className="custom-pointer"
-              />
-            </OverlayTrigger>
-          </Navbar.Text>
-        )}
+        <Navbar.Text>
+          <OverlayTrigger trigger="click" placement="bottom-end" rootClose="true" overlay={popover}>
+            <Image
+              src={user.photoURL}
+              onError={showDefaultImage}
+              roundedCircle="true"
+              width="50"
+              className="custom-pointer"
+            />
+          </OverlayTrigger>
+        </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
   );
