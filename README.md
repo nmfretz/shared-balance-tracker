@@ -81,6 +81,11 @@ Currently deployed at https://skippertracker.surge.sh/
 <br />
 <br />
 <kbd> 
+<img src="https://user-images.githubusercontent.com/85373263/181642180-a378cf75-2ba7-4e5e-b0d5-8caf204aa02e.png"/>
+</kbd>
+<br />
+<br />
+<kbd> 
 <img src="https://user-images.githubusercontent.com/85373263/181638562-9bda3d32-34e3-49b2-be58-bf22fff6ea83.png"/>
 </kbd>
 <br />
