@@ -117,4 +117,8 @@ body {
   .custom-family-balance-margin {
     margin-bottom: 0.5em;
   }
+
+  .custom-date-width {
+    min-width: 60px;
+  }
 }

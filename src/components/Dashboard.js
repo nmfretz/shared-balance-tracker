@@ -45,7 +45,7 @@ const Dashboard = () => {
         </Row>
         <Button
           className="mt-3 mb-5 custom-btn-color custom-skipper-btn"
-          onClick={() => window.open("https://skipperotto.com/")}
+          onClick={() => window.open("https://skipper.gosoftware.co/login.php")}
         >
           Visit Skipper Otto
         </Button>
