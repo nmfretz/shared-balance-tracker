@@ -19,7 +19,7 @@ const Dashboard = ({ purchases }) => {
       )}
       <Row>
         <Col lg={8} md={12}>
-          <Card className="p-4">
+          <Card className="custom-mainboard-padding">
             <MainBoard purchases={purchases} setError={setError} />
           </Card>
         </Col>
